@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飲食店</title>
+    <link rel="stylesheet" href="css/allindex.css/news.css">
+    <link rel="stylesheet" href="css/allindex.css/index.css">
+</head>
+<body>
+<header>
+    <h1>
+        <img src="images/おためしロゴ.jpg" class="logo">
+        <span data-translate-key="shop_name">店舗名</span>
+    </h1>
+
+    <nav id="main-nav">
+        <ul>
+            <li><a href="allmenu.html" data-translate-key="menu">メニュー</a></li>
+            <li><a href="shopinfo.html" data-translate-key="shopinfo">店舗情報</a></li>
+            <li><a href="contact.html" data-translate-key="contact">お問い合わせ</a></li>
+        </ul>
+    </nav>
+
+    <div class="hamburger-menu" id="hamburger-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
+
+<section class="slider">
+    <img src="images/ハンバーグ.jpg" class="slide active" alt="美味しいハンバーグ" data-translate-key="hamburg">
+    <img src="images/パスタ.jpg" class="slide" alt="パスタ" data-translate-key="pasta">
+    <img src="images/オムライス.jpg" class="slide" alt="オムライス" data-translate-key="ramen">
+    <button onclick="prev()">←</button>
+    <button onclick="next()">→</button>
+</section>
+
+<section class="announcements-section" style="text-align: center; margin: 30px auto; padding: 20px; background-color: #fff; max-width: 900px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+    <h3>お知らせ</h3>
+    <ul id="news-list"></ul>
+</section>
+
+<section class="menu">
+    <h3 data-translate-key="recommended_menu_title">おすすめメニュー</h3>
+    <div class="menu-items" id="featured-menu-container">
+    </div>
+    <p class="view-all-menu"><a href="allmenu.html" data-translate-key="view_all_menu">すべてのメニューを見る</a></p>
+</section>
+
+<section class="calendar-section" style="text-align: center; margin: 30px auto; padding: 20px; background-color: #fff; max-width: 900px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+    <h3 data-translate-key="calendar_title">営業日カレンダー</h3>
+    <p data-translate-key="calendar_description">当店の営業日をご確認ください。</p>
+    <p data-translate-key="opening_hours">営業時間: 00:00 - 00:00</p>
+
+    <div class="calendar-wrapper">
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FTokyo&showPrint=0&showTabs=0&showCalendars=0&showTz=0&showTitle=0&src=Z2FtZXIudG9tb2tpMTQxOUBnbWFpbC5jb20&src=Nzg4YmVkMjVjYzI4M2ExMjgzNjlhYWFyMjc2Njg1YTkwMjQ1YTU4ZjBiNDM5YTljMDBhOWI0NmNjNjA5ZWZiOEBncm91cC5jb2xlbmRhci5nb29nbGUuY29t&color=%23039be5&color=%23ad1457" style="border-width:0" frameborder="0" scrolling="no"></iframe>
+    </div>
+</section>
+
+<footer>
+    <p data-translate-key="address">住所: 〒000-0000 東京都〇〇区〇〇1-2-3 〇〇ビル1F</p>
+    <p data-translate-key="contact_info">ご予約・お問い合わせ: <a href="tel:0000000000">000-0000-0000</a></p>
+    <p data-translate-key="copyright">&copy; [2025] [店舗名またはあなたの名前] All Rights Reserved.</p>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger-menu');
+        const nav = document.querySelector('header nav');
+
+        hamburger.addEventListener('click', function() {
+            this.classList.toggle('open');
+            nav.classList.toggle('open');
+        });
+    });
+</script>
+
+<script src="js/index.js"></script>
+<script src="js/news.js"></script>
+
+</body>
+</html>

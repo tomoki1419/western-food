@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>メニュー｜店名</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <link rel="stylesheet" href="css/menu.css/menu2.css">
+</head>
+<body>
+<header>
+    <h1>
+        <img src="images/おためしロゴ.jpg" class="logo">
+        <span data-translate-key="shop_name">店舗名</span>
+    </h1>
+    <nav id="main-nav">
+        <ul>
+            <li><a href="index.html" data-translate-key="home">ホーム</a></li>
+            <li><a href="shopinfo.html" data-translate-key="shopinfo">店舗情報</a></li>
+            <li><a href="contact.html" data-translate-key="contact">お問い合わせ</a></li>
+        </ul>
+    </nav>
+    <div class="hamburger-menu" id="hamburger-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
+
+<nav id="menu-nav">
+  <ul>
+    <li><a href="#food">お食事</a></li>
+    <li><a href="#drink">お飲み物</a></li>
+    <li><a href="#soup">汁物</a></li>
+    <li><a href="#dessert">甘味</a></li>
+  </ul>
+</nav>
+
+<main>
+  <section class="menu-category">
+    <h3 class="category-title" id="food">お食事</h3>
+    <div class="menu-items" id="featured-food-container">
+      </div>
+  </section>
+
+  <section class="menu-category">
+    <h3 class="category-title" id="drink">お飲み物</h3>
+    <div class="menu-items" id="featured-drink-container">
+    </div>
+  </section>
+
+  <section class="menu-category">
+    <h2 class="category-title" id="soup">スープ</h2>
+    <div id="featured-soup-container" class="menu-items-grid">
+        </div>
+　</section>
+
+  <section class="menu-category">
+    <h3 class="category-title" id="dessert">甘味</h3>
+    <div class="menu-items" id="featured-dessert-container">
+    </div>
+  </section>
+
+  </main>
+
+<footer>
+    <p data-translate-key="address">住所: 〒000-0000 東京都〇〇区〇〇1-2-3 〇〇ビル1F</p>
+    <p data-translate-key="contact_info">ご予約・お問い合わせ: <a href="tel:0000000000">000-0000-0000</a></p>
+    <p data-translate-key="copyright">&copy; [2025] [店舗名またはあなたの名前] All Rights Reserved.</p>
+</footer>
+
+<script src="js/menu.js"></script>
+<script src="js/index.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger-menu');
+        const nav = document.querySelector('header nav');
+
+        hamburger.addEventListener('click', function() {
+            this.classList.toggle('open');
+            nav.classList.toggle('open');
+        });
+    });
+  </script>
+</body>
+</html>

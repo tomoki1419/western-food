@@ -1,0 +1,365 @@
+body {
+    font-family: 'Times New Roman', serif;
+    color: #333;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    background-color: #f0ebe5;
+}
+
+header {
+    background-color: #ffffff;
+    color: #333;
+    padding: 20px 50px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+header h1 {
+    display: flex;
+    align-items: center;
+    font-size: 2.0em;
+    margin: 0;
+    color: #a0522d;
+    font-family: 'Georgia', serif;
+    letter-spacing: 5px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+    margin-right: 15px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+header nav {
+    /* PC表示時は通常通り表示 */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+header nav li a {
+    text-decoration: none;
+    color: #a0522d;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 0 15px;
+    transition: color 0.3s;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+header nav li a:hover {
+    color: #333;
+}
+
+.hamburger-menu {
+    display: none;
+    width: 30px;
+    height: 25px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger-menu span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #333;
+    border-radius: 3px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+.hamburger-menu span:nth-child(1) { top: 0px; }
+.hamburger-menu span:nth-child(2) { top: 11px; }
+.hamburger-menu span:nth-child(3) { top: 22px; }
+
+#main-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: flex-end;
+    margin: 0;
+}
+
+#main-nav li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 1.1em;
+    display: inline-block;
+    padding: 0 20px 0 20px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+#main-nav li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #a0522d;
+    transition: width 0.3s;
+}
+
+#main-nav li a:hover {
+    color: #a0522d;
+}
+
+#main-nav li a:hover::after {
+    width: 100%;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+section.contact-section {
+            padding: 60px 20px;
+            background-color: #f9f6f1;
+            text-align: center;
+        }
+
+        .Form-Title {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #b8860b;
+            text-align: center;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #f0e68c;
+            padding-bottom: 10px;
+        }
+
+        .Form {
+            margin: 20px auto;
+            max-width: 720px;
+            background-color: #ffffff;
+            padding: 60px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .Form-Item {
+            border-top: 1px solid #e0e0e0;
+            padding: 30px 0;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .Form-Item:first-of-type {
+            border-top: none;
+        }
+
+        .Form-Item-Label {
+            width: 100%;
+            max-width: 150px;
+            text-align: left;
+            letter-spacing: 0.05em;
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #4a4a4a;
+            padding-top: 0;
+            line-height: 1.2;
+        }
+
+        .Form-Item-Input,
+        .Form-Item-Textarea {
+            font-family: 'Times New Roman', serif, sans-serif;
+            flex: 1;
+            border: 1px solid #dcdcdc;
+            border-radius: 6px;
+            padding: 14px 1.2em;
+            height: auto;
+            width: 100%;
+            background: #fdfaf5;
+            font-size: 1rem;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s ease;
+            margin-left: 0;
+            text-align: left;
+        }
+
+        .Form-Item-Input:focus,
+        .Form-Item-Textarea:focus {
+            outline: none;
+            border-color: #b8860b;
+            box-shadow: 0 0 5px rgba(184, 134, 11, 0.5);
+        }
+
+        .Form-Item-Textarea {
+            height: 180px;
+            resize: vertical;
+        }
+
+        .Form-Btn {
+            border-radius: 8px;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 18px 40px;
+            width: auto;
+            font-size: 1.2rem;
+            display: block;
+            letter-spacing: 0.2em;
+            background: #b8860b;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .Form-Btn:hover {
+            background: #a57e0a;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+        }
+
+footer {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #4a4a4a;
+    color: #fff;
+    margin-top: 0;
+    border-top: none;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+}
+
+footer a {
+    color: #ffb74d;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+@media screen and (max-width: 800px) {
+
+body{
+    font-size: 10px;
+}
+header {
+        padding: 15px 20px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    header nav.open {
+        display: block;
+        position: fixed;
+        top: 65px;
+        right: 0;
+        width: 100%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: #ffffff;
+        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 990;
+        transition: right 0.3s ease-in-out;
+    }
+
+    header nav:not(.open) {
+        right: -100%;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 0;
+    }
+
+    header nav li {
+        width: 100%;
+    }
+
+    header nav li a {
+        display: block;
+        padding: 15px 30px;
+        text-align: left;
+        font-size: 1.2em;
+        color: #333;
+        font-weight: normal;
+    }
+
+    header nav li a:hover {
+        background-color: #f0ebe5;
+    }
+
+    .hamburger-menu.open span:nth-child(1) {
+        top: 11px;
+        transform: rotate(135deg);
+    }
+    .hamburger-menu.open span:nth-child(2) {
+        opacity: 0;
+        transform: scale(0);
+    }
+    .hamburger-menu.open span:nth-child(3) {
+        top: 11px;
+        transform: rotate(-135deg);
+    }
+    .Form {
+                padding: 30px 15px;
+                margin: 40px auto;
+            }
+
+            .Form-Title {
+                font-size: 1.8rem;
+            }
+
+            .Form-Item {
+                flex-direction: column;
+                align-items: flex-start;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .Form-Item-Label {
+                text-align: left;
+                max-width: none;
+                width: 100%;
+                font-size: 1rem;
+            }
+
+            .Form-Item-Input,
+            .Form-Item-Textarea {
+                margin-left: 0;
+                margin-top: 5px;
+                font-size: 16px;
+            }
+        }

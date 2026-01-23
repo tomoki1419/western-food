@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <title>店舗情報｜店名</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/shopinfo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>
+            <img src="images/おためしロゴ.jpg" class="logo">
+            <span data-translate-key="shop_name">店舗名</span>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-translate-key="home">ホーム</a></li>
+                <li><a href="allmenu.html" data-translate-key="menu">メニュー</a></li>
+                <li><a href="contact.html" data-translate-key="contact">お問い合わせ</a></li>
+            </ul>
+        </nav>
+
+        <div class="hamburger-menu" id="hamburger-btn">
+             <span></span>
+             <span></span>
+             <span></span>
+        </div>
+    </header>
+
+    <main>
+        <section class="section-container about-us-section">
+            <h2 class="section-title">お店について</h2>
+            <p class="section-text">
+                ここに、お店のコンセプトやこだわりを記載します。私たちは〇〇な食材と〇〇な調理法にこだわっています。
+            </p>
+        </section>
+
+        <section class="section-container info-section">
+            <h2 class="section-title">基本情報</h2>
+            <div class="info-details-container">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <dl>
+                        <dt>住所</dt>
+                        <dd>東京都〇〇区〇〇-〇〇-〇〇</dd>
+                    </dl>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <dl>
+                        <dt>電話番号</dt>
+                        <dd><a href="tel:03-xxxx-xxxx">03-xxxx-xxxx</a></dd>
+                    </dl>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <dl>
+                        <dt>営業時間</dt>
+                        <dd>11:00 ～ 22:00（L.O. 21:30）</dd>
+                    </dl>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <dl>
+                        <dt>定休日</dt>
+                        <dd>毎週水曜日</dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="allmenu.html" class="button button-secondary">すべてのメニューを見る</a>
+            </div>
+        </section>
+
+        <section class="section-container access-map">
+    <h2 class="section-title">地図・アクセス</h2>
+    <div class="map-embed">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d130700.36761398125!2d139.55631645220845!3d35.65780437554696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b857628235d%3A0xcdd8aef709a2b520!2z5p2x5Lqs6YO95p2x5Lqs!5e0!3m2!1sja!2sjp!4v1760003467434!5m2!1sja!2sjp"
+            width="100%"
+            height="400px"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+    <p class="access-guidance">
+        〇〇駅から徒歩5分です。
+    </p>
+</section>
+
+        <section class="section-container photo-gallery">
+            <h2 class="section-title">店内の様子</h2>
+            <div class="gallery-grid">
+                <img src="images/店舗和食1.jpg" alt="店内の写真1">
+                <img src="images/店舗和食2.jpg" alt="店内の写真2">
+                <img src="images/店舗和食3.jpg" alt="店内の写真3">
+            </div>
+        </section>
+    </main>
+
+<footer>
+    <p data-translate-key="address">住所: 〒000-0000 東京都〇〇区〇〇1-2-3 〇〇ビル1F</p>
+    <p data-translate-key="contact_info">ご予約・お問い合わせ: <a href="tel:0000000000">000-0000-0000</a></p>
+    <p data-translate-key="copyright">&copy; [2025] [店舗名またはあなたの名前] All Rights Reserved.</p>
+</footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger-menu');
+        const nav = document.querySelector('header nav');
+
+        hamburger.addEventListener('click', function() {
+            this.classList.toggle('open');
+            nav.classList.toggle('open');
+        });
+    });
+    </script>
+    </body>
+</html>

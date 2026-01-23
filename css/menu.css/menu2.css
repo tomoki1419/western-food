@@ -1,0 +1,343 @@
+body {
+    font-family: 'Times New Roman', serif;
+    color: #333;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    background-color: #f0ebe5;
+}
+
+header {
+    background-color: #ffffff;
+    color: #333;
+    padding: 20px 50px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+header h1 {
+    display: flex;
+    align-items: center;
+    font-size: 2.0em;
+    margin: 0;
+    color: #a0522d;
+    font-family: 'Georgia', serif;
+    letter-spacing: 5px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+    margin-right: 15px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+header nav {
+    /* PC表示時は通常通り表示 */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+header nav li a {
+    text-decoration: none;
+    color: #a0522d;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 0 15px;
+    transition: color 0.3s;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+header nav li a:hover {
+    color: #333;
+}
+
+.hamburger-menu {
+    display: none;
+    width: 30px;
+    height: 25px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger-menu span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #333;
+    border-radius: 3px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+.hamburger-menu span:nth-child(1) { top: 0px; }
+.hamburger-menu span:nth-child(2) { top: 11px; }
+.hamburger-menu span:nth-child(3) { top: 22px; }
+
+/* ページ内ナビ (お食事/お飲み物/...) */
+#menu-nav {
+    position: sticky;
+    top: 80px;
+    background-color: #fff;
+    padding: 15px 0;
+    z-index: 1000;
+    border-bottom: 1px solid #eee;
+}
+
+#menu-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+#menu-nav li a {
+    text-decoration: none;
+    color: #B03A2E;
+    padding: 0 20px;
+    font-weight: bold;
+}
+
+/* ==================================== */
+/* 2. メニューセクション (PC) */
+/* ==================================== */
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.category-title {
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 50px;
+    /* PCでヘッダーに隠れないようにする */
+    scroll-margin-top: 160px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.menu-item--reverse { flex-direction: row-reverse; }
+
+.menu-image { flex: 0 0 35%; padding: 10px; }
+.menu-image img { width: 100%; border-radius: 4px; object-fit: cover; }
+.menu-details { flex: 1; padding: 0 20px; }
+
+.menu-price-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px dotted #ccc;
+    margin-bottom: 10px;
+}
+
+.menu-name { font-size: 1.5em; color: #B03A2E; margin: 0; }
+.menu-price { font-weight: bold; color: #4A4A4A; }
+
+footer {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #4a4a4a;
+    color: #fff;
+    margin-top: 0;
+    border-top: none;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+}
+
+footer a {
+    color: #ffb74d;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+@media (max-width: 800px) {
+    body{
+    font-size: 10px;
+}
+    header {
+        padding: 15px 20px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    header nav.open {
+        display: block;
+        position: fixed;
+        top: 65px;
+        right: 0;
+        width: 100%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: #ffffff;
+        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 990;
+        transition: right 0.3s ease-in-out;
+    }
+
+    header nav:not(.open) {
+        right: -100%;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 0;
+    }
+
+    header nav li {
+        width: 100%;
+    }
+
+    header nav li a {
+        display: block;
+        padding: 15px 30px;
+        text-align: left;
+        font-size: 1.2em;
+        color: #333;
+        font-weight: normal;
+    }
+
+    header nav li a:hover {
+        background-color: #f0ebe5;
+    }
+
+    .hamburger-menu.open span:nth-child(1) {
+        top: 11px;
+        transform: rotate(135deg);
+    }
+    .hamburger-menu.open span:nth-child(2) {
+        opacity: 0;
+        transform: scale(0);
+    }
+    .hamburger-menu.open span:nth-child(3) {
+        top: 11px;
+        transform: rotate(-135deg);
+    }
+
+    /* ページ内ナビ (目次部分) */
+    #menu-nav {
+        top: 60px;
+        padding: 8px 0;
+    }
+
+    #menu-nav li a {
+        padding: 0 10px;
+        font-size: 0.85em;
+    }
+
+    /* タイトルが埋まらないようにする設定 */
+    .category-title {
+        scroll-margin-top: 120px;
+        font-size: 1.6em;
+    }
+
+    /* --- メニュー中身の調整 (幅いっぱいにしない) --- */
+    main {
+        padding: 0 20px; /* 画面端の余白 */
+        margin: 20px auto;
+    }
+
+    .menu-item, .menu-item--reverse {
+        flex-direction: column;
+        padding: 0;
+        margin-bottom: 30px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .menu-image {
+        width: 100%;
+        padding: 0;
+    }
+
+    .menu-image img {
+        border-radius: 12px 12px 0 0;
+        aspect-ratio: 16 / 9; /* 画像の高さを抑えて見やすくする */
+    }
+
+    .menu-details {
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .menu-price-line {
+        flex-direction: column;
+        border-bottom: none;
+    }
+
+    .menu-name {
+        font-size: 1.3em;
+        margin-bottom: 5px;
+        border-left: 3px solid #B03A2E;
+        padding-left: 10px;
+    }
+
+    .menu-price {
+        text-align: right;
+        width: 100%;
+        font-size: 1.1em;
+    }
+
+    .menu-description {
+        font-size: 0.9em;
+        margin-top: 10px;
+        color: #666;
+    }
+
+        footer {
+        padding: 25px 15px;
+        font-size: 0.85em;
+        line-height: 1.6;
+    }
+    footer address, footer p {
+        margin-bottom: 8px;
+    }
+    footer a {
+        font-size: 0.9em;
+    }
+}
